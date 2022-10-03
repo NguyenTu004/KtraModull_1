@@ -6,30 +6,31 @@
 </head>
 <body>
 <script>
-  function sumOfListPrime(x) {
-      let sum = 0;
-      for (let i = 0; i <= x; i++) {
-          if (checkNum(i)) {
-              sum += i;
-          }
-      }
-      console.log(sum)
-      return sum;
-  }
-  function checkNum(num) {
-      let check = true;
-      if (num < 2) {
-          check = false;
-      } else if (num > 2) {
-          for (let i = 2; i < num; i++) {
-              if (num % i === 0) {
-                  check = false;
-                  break;
+    let check = true;
+    function sumOfListPrime(x) {
+          let sum = 0;
+          for (let i = 0; i <= x; i++) {
+              if (checkNum(i)) {
+                  sum += i;
               }
           }
-      }
+      console.log(sum)
+      return sum;
+     }
+    function checkNum(num) {
+
+          if (num < 2) {
+              check = false;
+          } else if (num > 2) {
+              for (let i = 2; i < num; i++) {
+                  if (num % i === 0) {
+                      check = false;
+                      break;
+                  }
+              }
+          }
       return check;
-  }
+    }
   sumOfListPrime(10)
 </script>
 </body>
