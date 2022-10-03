@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [21,2345,43,562346,234,23,4];
+  let x = +prompt("Nhap x: ") ;
+  let k = +prompt("Nham vi tri cua x: ") ;
+  let flag=false ;
+  function insertNumberToArray(x,k){
+      for (let i =0;i<arr.length;i++){
+          if (i===k){
+              flag=true;
+          }
+      }
+      if (flag){
+          arr[k]=x;
+      }
+      console.log(arr)
+  }
+  insertNumberToArray(x,k)
+</script>
+</body>
+</html>
