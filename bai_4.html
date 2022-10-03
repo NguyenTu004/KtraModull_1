@@ -20,16 +20,15 @@
         this.width=width;
         this.color=color;
     }
-      render(canvas) {
-          let data = canvas.getContext("2d");
+      render() {
+          let data = document.getElementById("canvas").getContext("2d");
           data.beginPath();
           data.fillRect(this.x, this.y, this.width, this.height);
           data.fillStyle = this.color;
       }
   }
   let rectangle1 = new Rectangle(20,10,400,600,"#463a3a");
-  let canvas = document.getElementById("canvas");
-  rectangle1.render(canvas);
+  rectangle1.render();
 
 </script>
 </body>
